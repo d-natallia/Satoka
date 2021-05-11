@@ -46,17 +46,18 @@
 
 .photo-s-text{
   text-align: right;
-  margin-right: 20px;
+  margin-left: 135px;
+  width: 400px;
+  
 } 
 
 .img_text {
-    margin: 0 auto;
+    margin: 15px 0;
     text-transform: uppercase;
     color: #fff;
-    margin-top: 25px;
     font-family: 'bebas-neue-pro', sans-serif;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .img_text1 {
@@ -80,10 +81,10 @@
     width: 650px;
     padding-top: 30px;
     text-align: center;
-  
-    word-spacing: 3px;    
-    font-size: 30px;
+   
+    font-size: 24px;
     font-style: italic;
+    font-weight: 100;
   }
   .red{
     color: #c72b00; 
@@ -113,7 +114,6 @@
   }
   .card-title1{
     text-transform: uppercase;
-    letter-spacing: 2px;
     background-color: #ffd37f;
     padding: 8px; 
     font-family: bebas-neue-pro, sans-serif;

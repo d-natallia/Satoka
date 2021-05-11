@@ -1,0 +1,89 @@
+/*Kontakt*/
+.yellow-kontakt {
+ width: 100%;
+ background-color: #ffd37f;
+}
+
+.titel-kontakt{
+  margin: 0;
+  color: #fff;
+  padding-top: 250px;
+  text-align: center;
+
+  text-transform: uppercase;
+  font-family: bebas-neue-pro sans-serif;
+  font-size: 72px;
+}
+
+.kontakt-bloc{
+  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-wrapper{
+  margin: 60px;
+  max-width: 160px;
+  }
+
+.icon-container{
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 66px;
+  margin-bottom: 10px;
+}
+.email{
+  background-image: url("../img/brief.svg");
+}
+.telefon{
+  background-image: url("../img/telefon.svg");
+}
+.facebook{
+  background-image: url("../img/facebook.svg");
+}
+.instagram{
+  background-image: url("../img/instgram.svg");
+}
+
+
+.kontakt-subtitel{
+  font-family: bebas-neue-pro sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.kontakt-subtitel:hover{
+  color: #fff;
+  transition: 0.7s;
+}
+/*Kontakt Container*/
+.section-adress{
+  margin: 85px 0 100px 0 ;
+}
+
+.container-adresse{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.adrese{
+  padding-right: 50px;
+}
+
+.ua-card{
+  margin-top: 80px;
+  max-width: 220px;
+  line-height: 1.3;
+}
+.picture-kontakt{
+  max-height: 630px;
+}
+
+.de-adresse{
+  max-width: 220px;
+  line-height: 1.3;
+}

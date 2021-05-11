@@ -1,0 +1,148 @@
+
+/*Intro Spenden*/
+.intro_spende{
+  background-image: url(../img/intro.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  opacity: 1;
+}
+
+.intro_spende:hover{
+  transition-property: opacity;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 500ms;
+}
+
+.text-bedingungen{
+  margin: 100px 0 50px 0;
+  text-align: justify;
+}
+
+/*Sachspenden grafik*/
+.section-grafik{
+  display: flex;
+  justify-content: space-between;
+}
+
+.g-bloc{
+  width: 265px;
+}
+
+.left{
+  justify-content: start;
+}
+
+.right{
+  justify-content: end;
+  text-align: right;
+}
+
+.g-b-text{
+  margin: 0 0 10px 0;
+}
+
+.g-text{
+  margin-top: 10px;
+}
+
+.g-margin{
+  margin-top: 100px;
+}
+.yellow{
+  color: #ffd37f;
+}
+.rot{
+  color: #c72b00;
+}
+.grey{
+  color: #404048;
+}
+
+.icon-grafik{
+  margin: 50px 20px;
+  width: 400px;
+}
+
+.titel-spenden{
+  margin-top: 90px;
+}
+
+
+.sachspenden-card{
+  max-width: 620px;
+}
+
+.sachspenden{
+  max-width: 900px;
+}
+
+.white-wrapper{
+  background-color: #fff;
+  width: 620px;
+  margin-bottom: 50px;
+}
+
+.sommer{
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.spende-kg{
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/*Sachspenden section*/
+.spenden-container{
+  display: flex;
+}
+
+.text-380kg{
+  margin: 0;
+}
+
+.text-380kg-bold{
+  font-family: bebas-neue-pro sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.icon-hearth{
+  width: 35%;
+}
+
+/*prinzip*/
+.background-prinzip{
+  background-image: url(../img/20.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 680px;
+}
+
+.text-prinzip{
+  margin: 0;
+  padding: 0;
+  font-family: bebas-neue-pro sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.text-about-prinzip{
+  font-size: 24px;
+  text-align: justify;
+}
+.text-centre{
+  font-size: 24px;
+  font-weight:400;
+}
+
+.red{
+  color: #c72b00;
+}

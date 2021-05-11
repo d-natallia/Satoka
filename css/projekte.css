@@ -1,0 +1,131 @@
+
+/*Projekte*/
+.hero{
+    background-image: url("../img/23.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .container-hero {
+      padding: 540px 0 105px 280px;
+    }
+    
+    .contain{
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .hero-content{
+      margin-left: 115px;
+    }
+    
+    .titel-yellow{
+      max-width: 420px;
+      color: #ffd37f;
+      font-size: 72px;
+      margin: 0;
+    }
+    
+    .w-subtitle{
+      color: #fff;
+      width: 700px;
+    }
+    
+    .contact-title{
+      margin-top: 66px;
+    }
+    .project-text{
+      margin: 0;
+      width: 900px;
+      font-size: 24px;
+      text-align: justify;
+    }
+    /*Projekte Did*/
+    .title-red{
+      font-family: bebas-neue-pro sans-serif;
+      font-size: 38px;
+      color: #c72b00;
+      text-transform: uppercase;
+      margin: 60px 0;
+    }
+    
+    .border-do-list-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .yellow-wrapper-did{
+      margin: 0;
+      background-color: #ffd27fd0;
+      width: 280px;
+      display: flex;
+      justify-content: center;
+      margin-right: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .icon-text{
+      padding-top: 220px;
+      text-align: center;
+      font-size: 25px;
+    }
+    
+    .icon-computer{
+      background-image: url("../img/icon-computer.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    
+    .icon-child-room{
+      background-image: url("../img/icon-kinderzimmer.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    
+    .icon-redev{
+      background-image: url("../img/icon-sanierung.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    
+    .icon-wish{
+      background-image: url("../img/icon-wunsch.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    
+    
+    .icon-play-ground{
+      background-image: url("../img/icon-spielplatz.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    
+    /*Projekte Footer*/
+    .footer-intro{
+      background-image: url("../img/24.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 100px 0 0 0 ;
+    }
+    
+    .footer-intro-container{
+      padding: 270px 270px 180px;
+
+    }
+    
+    .title-white-footer{
+      max-width: 800px;
+      color: #fff;
+      font-size: 72px;
+      margin: 0;
+    }
+    .subtitle-white{
+      color: #fff;
+      max-width: 800px;
+      background-color: #404048;
+      padding: 20px;
+    }
+    
