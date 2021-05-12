@@ -45,6 +45,25 @@
 	font-weight: 200;
 	font-style: normal;
 }
+  
+  .bank-daten-border{
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .bank-daten { 
+    display: inline-block;
+    position: relative;
+  
+    margin: 0 25px;  
+    padding-top: 15px;
+  
+    text-transform: uppercase;
+  
+    font-size: 16px;
+    font-weight: 100;
+    color:#000000;
+    }
 
 * {
     box-sizing: border-box;
@@ -52,6 +71,10 @@
 
 ::-webkit-scrollbar {
   width: 0;
+}
+
+address{
+  font-style: normal;
 }
 
 body {
@@ -95,6 +118,7 @@ h5{
   font-style: normal;
   font-size: 27px;
   font-weight: 600;
+  margin: 0 0 15px 0;
 }
 figcaption{
   margin-top: 20px;

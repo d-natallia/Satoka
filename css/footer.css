@@ -1,16 +1,31 @@
+.bank-daten-border-f{
+  display: flex;
+  justify-content: center;
+}
 
-/*footer*/
+
+.bank-daten-f {
+  display: flex;
+  padding: 30px 0 30px 0;
+  text-transform: uppercase;
+}
+.bank-daten-f:not(:last-child) {
+  padding-right: 130px;
+}
+
 .footer{
     display: table-row;
     margin-bottom: 0;
   }
   .rectangle-footer{
+    background-color: #ffd37f;
+  }
+  .rectangle-footer-inner{
     display: flex;
     justify-content: space-between;
     background-color: #ffd37f;
     padding: 30px 0 40px 0;
   }
-  
   .logo-footer{
     margin-left: 150px;
     background-image: url(../img/logotype_finish1.png);
