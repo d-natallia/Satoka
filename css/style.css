@@ -1,263 +1,141 @@
 @font-face {
-	font-family: bebas-neue-pro sans-serif;
-	src: url('fonts/BebasNeue-Regular.eot');
-	src: local('☺'), url('../fonts/BebasNeue-Regular.woff') format('woff'), url('fonts/BebasNeue-Regular.ttf') format('truetype'), url('fonts/BebasNeue-Regular.svg') format('svg');
-	font-weight: normal;
+    font-family: Gothic A1 sans-serif;
+	src: url('fonts/GothicA1-Regular.ttf');
+	src: local('☺'), url('../fonts/gothic-regular.woff') format('woff'), url('../fonts/gothic-regular.woff2') format('woff2'), url('fonts/GothicA1-Regular.ttf') format('truetype'), url('fonts/GothicA1-Regular.svg') format('svg');
+	font-weight: 400;
 	font-style: normal;
 }
 
-@font-face {
-	font-family: fira-sans sans-serif;
-	src: url('fonts/FiraSans-Bold.eot');
-	src: local('☺'), url('../fonts/FiraSans-Bold.woff') format('woff'), url('fonts/FiraSans-Bold.ttf') format('truetype'), url('fonts/FiraSans-Bold.svg') format('svg');
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: fira-sans sans-serif;
-	src: url('fonts/FiraSans-Medium.eot');
-	src: local('☺'), url('../fonts/FiraSans-Medium.woff') format('woff'), url('fonts/FiraSans-Medium.ttf') format('truetype'), url('fonts/FiraSans-Medium.svg') format('svg');
+@font-face {   
+	font-family: Gothic A1 sans-serif;
+	src: url('fonts/GothicA1-Medium.ttf');
+	src: local('☺'), url('../fonts/gothic-medium.woff') format('woff'), url('../fonts/gothic-medium.woff2') format('woff2'), url('fonts/GothicA1-Medium.ttf') format('truetype'), url('fonts/GothicA1-Medium.svg') format('svg');
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: fira-sans sans-serif;
-	src: url('fonts/FiraSans-Regular.eot');
-	src: local('☺'), url('../fonts/FiraSans-Regular.woff') format('woff'), url('fonts/FiraSans-Regular.ttf') format('truetype'), url('fonts/FiraSans-Regular.svg') format('svg');
-	font-weight: 400;
+	font-family: Gothic A1 sans-serif;
+	src: url('fonts/GothicA1-Bold.ttf');
+	src: local('☺'), url('../fonts/gothic-bold.woff') format('woff'), url('../fonts/gothic-bold.woff2') format('woff2'), url('fonts/GothicA1-Bold.ttf') format('truetype'), url('fonts/GothicA1-Bold.svg') format('svg');
+	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: fira-sans-light sans-serif;
-	src: url('fonts/FiraSans-Light.eot');
-	src: local('☺'), url('../fonts/FiraSans-Light.woff') format('woff'), url('fonts/FiraSans-Light.ttf') format('truetype'), url('fonts/FiraSans-Light.svg') format('svg');
+	font-family: Gothic A1 sans-serif;
+	src: url('fonts/GothicA1-Light.ttf');
+	src: local('☺'), url('../fonts/gothic-light.woff') format('woff'), url('../fonts/gothic-light.woff2') format('woff2'), url('fonts/GothicA1-Light.ttf') format('truetype'), url('fonts/GothicA1-Light.svg') format('svg');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: fira-sans sans-serif;
-	src: url('fonts/FiraSans-ExtraLight.eot');
-	src: local('☺'), url('../fonts/FiraSans-ExtraLight.woff') format('woff'), url('fonts/FiraSans-ExtraLight.ttf') format('truetype'), url('fonts/FiraSans-ExtraLight.svg') format('svg');
-	font-weight: 200;
+    font-family: Lato sans-serif;
+    src: url('fonts/Lato-Light.ttf');
+	src: local('☺'), url('../fonts/lato-light.woff') format('woff'), url('../fonts/lato-light.woff2') format('woff2'), url('fonts/Lato-Light.ttf') format('truetype'), url('fonts/GothicA1-Light.svg') format('svg');
+	font-weight: 300;
 	font-style: normal;
 }
-  
-  .bank-daten-border{
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .bank-daten { 
-    display: inline-block;
-    position: relative;
-  
-    margin: 0 25px;  
-    padding-top: 15px;
-  
-    text-transform: uppercase;
-  
-    font-size: 16px;
-    font-weight: 100;
-    color:#000000;
-    }
+
+@font-face {
+    font-family: Lato sans-serif;
+    src: url('fonts/Lato-Regular.ttf');
+	src: local('☺'), url('../fonts/lato-regular.woff') format('woff'), url('../fonts/lato-regular.woff2') format('woff2'), url('fonts/Lato-Regular.ttf') format('truetype'), url('fonts/Lato-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: Lato sans-serif;
+    src: url('fonts/Lato-Bold.ttf');
+	src: local('☺'), url('../fonts/lato-bold.woff') format('woff'), url('../fonts/lato-bold.woff2') format('woff2'), url('fonts/Lato-Bold.ttf') format('truetype'), url('fonts/Lato-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
 
 * {
     box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+	width: 0;
 }
 
 address{
-  font-style: normal;
+	font-style: normal;
 }
 
 body {
-  margin: 0 auto;
-  font-family: fira-sans sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-  width: 100%;
-  display: table;
+	margin: 0 auto;
+	padding: 0 100px;
+	font-family: Gothic A1 sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 1;
+	width: 100%;
+	display: table;
+	line-height: 38px;
 }
 
 a {
-  text-decoration: none;
-  color:inherit;
+	text-decoration: none;
+	color:inherit;
 }
 
 ul, ol{
-  list-style-type: none;
-  padding: 0;
-  margin: 0 auto;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto;
+}
+
+h1{
+	font-family: Lato sans-serif;
+	font-size: 160px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 160px;
 }
 
 h2{
-  font-family: bebas-neue-pro sans-serif;
-  font-style: normal;
-  font-size: 60px;
-  color: #404048;
-  letter-spacing: 2px;
-  text-align: left;
-  text-transform: uppercase;
+	font-family: Lato sans-serif;
+	font-size: 124px;
+	font-weight: 700;
+	line-height: 130px;
 }
 
 h3{
-  font-family: fira-sans sans-serif;
-  font-weight: 400;
-  font-size: 30px;
+    font-family: Lato sans-serif;
+	font-size: 86px;
+	font-weight: 400;
+	line-height: 100px;
+}
+
+h4{
+    font-family: Lato sans-serif;
+	font-size: 62px;
+	font-weight: 400;
+	line-height: 80px;
 }
 
 h5{
-  font-family: bebas-neue-pro sans-serif;
-  font-style: normal;
-  font-size: 27px;
-  font-weight: 600;
-  margin: 0 0 15px 0;
-}
-figcaption{
-  margin-top: 20px;
-  font-size: 18px;
-  text-align: left;
-  font-style: italic;
-  color: #69696c;
+    font-family: Lato sans-serif;
+	font-size: 54px;
+	font-weight: 400;
+	line-height: 60px;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1000px;
+.bold{
+	font-family: Gothic A1 sans-serif;
+	font-size: 26px;
+	font-weight: 700;
 }
 
-.container_inner {
-  width: 100%;
-  margin: 0 auto;
+.medium{
+	font-family: Gothic A1 sans-serif;
+	font-size: 40px;
+	font-weight: 500;
 }
 
-.header-container{
-  margin: 0 auto;
-  width: 100%;
-  justify-content: center;
-}
 
-.header-inner{  
-  display: flex;
-  justify-content: space-between;
-}
-
-.header{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/*навигация*/
-#dws-menu,
-header label {
-  display: none;
-}
-
-.nav-card{
-  text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 100px;
-}
-
-.nav-link{
-  display: inline-block;
-  vertical-align: top;
-  color: #c72b00;
-
-  margin: 0 20px;
-  transition: color 0.2s linear;
-}
-.nav-link:hover{
-  color: #fff;
-  transition: .7s;
-}
-.nav {
-  margin: 10px 150px;  
-  font-family: bebas-neue-pro sans-serif;
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  vertical-align: middle;
-
-
-}
-
-.logo-header {
-  max-width: 100px;
-  margin: 8px 0 0 90px;  
-}
-
-.rectangle {
-  height: 50px;
-  background: #ffd37f; 
-}
-
-.main-inner{
-  margin: 0 auto;
-
-  width: 100%;
-  max-width: 900px;
-}
-
-/*Computterraum*/
-.computer-text-b{
-  margin-top: 170px;
-}
-
-figure{
-  text-align: left;
-  margin: 0;
-}
-
-.contact-figure-p{
-  height: 553px;
-}
-
-.computer-text-about{
-  width: 870px;
-  font-size: 24px;
-}
-
-.computer-text-margin{
-  margin: 45px 0;
-}
-
-.computer-figure-bloc{
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact-figure-vor{
-  width: 577px;
-  margin-right: 15px;
-}
-
-.contact-figure-nach{
-  width: 446px;
-}
-
-/*Wunschallee*/
-.computer-text-c{
-  margin-top: 50px;
-}
-
-.contact-hero{
-  background-image: url("../img/IMG_7038.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
