@@ -69,7 +69,7 @@ address{
 
 body {
 	margin: 0 auto;
-	padding: 0 100px;
+	padding-left: 18px;
 	font-family: Gothic A1 sans-serif;
 	font-weight: 400;
 	font-size: 30px;
@@ -138,4 +138,10 @@ h5{
 	font-weight: 500;
 }
 
-
+.page-divider {
+	width: 18px;
+	background-color: #5585FF;
+	position: fixed;
+	height: 100%;
+	left: 0;
+}
