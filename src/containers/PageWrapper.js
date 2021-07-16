@@ -265,7 +265,7 @@ export const PageWrapper = ({ children }) => {
       <FooterWrapper>
         <FooterLinksWrapper>
           {links.map(({ title, text }) => (
-            <FooterItemWrapper>
+            <FooterItemWrapper key={text}>
               <FooterItemTitle>{title}</FooterItemTitle>
               <FooterItemText>{text}</FooterItemText>
             </FooterItemWrapper>
