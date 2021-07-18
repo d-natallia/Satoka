@@ -6,6 +6,7 @@ export const Text = styled.p`
   font-family: Lato sans-serif;
   font-style: normal;
   margin: 0;
+  color: ${COLORS.black};
 `;
 
 export const Title = styled(Text)`
@@ -37,5 +38,27 @@ export const Title = styled(Text)`
     width: 304px;
     margin-top: 46px;
     margin-left: 6px;
+  }
+`;
+
+export const Header = styled(Text)`
+  font-weight: bold;
+  font-size: 144px;
+  line-height: 156px;
+
+  ${SCREEN_QUERIES.large} {
+    font-size: 105px;
+    line-height: 120px;
+  }
+
+  ${SCREEN_QUERIES.medium} {
+    font-size: 60px;
+    line-height: 75px;
+  }
+
+  ${SCREEN_QUERIES.small} {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
   }
 `;
