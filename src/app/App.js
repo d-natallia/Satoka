@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Home, Motto, Project, Done } from '../layouts';
+import { Home, Motto, Project, Done, Donate } from '../layouts';
 
 export const App = () => (
   <Router>
@@ -9,6 +9,7 @@ export const App = () => (
       <Route exact path='/motto' component={Motto} />
       <Route exact path='/project' component={Project} />
       <Route exact path='/done' component={Done} />
+      <Route exact path='/donate' component={Donate} />
     </Switch>
   </Router>
 );
