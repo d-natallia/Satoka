@@ -3,17 +3,28 @@ import styled from 'styled-components';
 import { COLORS, SCREEN_QUERIES } from '../../config';
 import { Text } from '../../components/Text';
 
+const PRE_LARGE_QUERY = `@media (max-width: 1600px)`;
+
 export const DonateText = styled(Text)`
   font-weight: normal;
   font-size: 36px;
   line-height: 48px;
   margin-top: ${(p) => p.marginTop}px;
   margin-bottom: ${(p) => p.marginBottom}px;
+
+  ${PRE_LARGE_QUERY} {
+    font-size: 22px;
+    line-height: 30px;
+  }
 `;
 
 export const DonateTextBold = styled(DonateText)`
   font-weight: bold;
   line-height: 45px;
+
+  ${PRE_LARGE_QUERY} {
+    line-height: 30px;
+  }
 `;
 
 export const FullDonateText = styled(DonateText)`
@@ -36,6 +47,19 @@ export const DonateMiddleContainer = styled.div`
       width: 100%;
     }
   }
+
+  ${SCREEN_QUERIES} {
+    flex-direction: column;
+
+    & div {
+      width: 100%;
+
+      & img {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const DonateMiddleText = styled.div`
@@ -46,6 +70,11 @@ export const DonateTextBoldLarge = styled(DonateText)`
   font-weight: 500;
   font-size: 50px;
   line-height: 62px;
+
+  ${PRE_LARGE_QUERY} {
+    font-size: 30px;
+    line-height: 45px;
+  }
 `;
 
 export const DonateTextBoldSmall = styled(DonateTextBold)`
@@ -53,6 +82,13 @@ export const DonateTextBoldSmall = styled(DonateTextBold)`
   line-height: 45px;
   margin-top: 170px;
   margin-bottom: 190px;
+
+  ${PRE_LARGE_QUERY} {
+    font-size: 22px;
+    line-height: 34px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const StagesWrapper = styled.div`
@@ -163,7 +199,12 @@ export const DonateOptionText = styled(DonateText)`
 export const MiddleDonateText = styled(DonateOptionText)`
   margin-top: 190px;
   margin-bottom: 145px;
-  align-self: flex-end;
+
+  ${PRE_LARGE_QUERY} {
+    align-self: flex-start;
+    margin-top: 120px;
+    margin-bottom: 90px;
+  }
 
   ${SCREEN_QUERIES.medium} {
     margin-top: 100px;

@@ -39,7 +39,7 @@ export const Home = () => (
   <PageWrapper>
     <MainWrapper>
       <MainTitle>Satoka</MainTitle>
-      <MainTitle>Kinderhilfe e.v.</MainTitle>``
+      <MainTitle>Kinderhilfe e.v.</MainTitle>
     </MainWrapper>
     <PageContainer>
       <PageInnerContainer>
