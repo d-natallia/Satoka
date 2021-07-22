@@ -1,3 +1,5 @@
+import OrangeTriangleImg from '../../assets/images/triangle_orange.svg';
+
 import { Title, Header } from '../../components/Text';
 import { PageWrapper } from '../../containers/PageWrapper';
 import { PageFullContainer } from '../../containers/PageContainer';
@@ -19,6 +21,8 @@ import {
   StageText,
   FirstTextDesc,
   MiddleTextDesc,
+  OrangeTriangle,
+  OrangeCircle,
 } from './done.styles';
 
 const textBlocks = [
@@ -77,6 +81,9 @@ export const Done = () => (
         entschieden, ein Kinderzimmer einzurichten. Das Kinderzimmer wurde
         komplett saniert und der Psychologin übergeben.
       </TextDesc>
+      <OrangeTriangle>
+        <img src={OrangeTriangleImg} alt='orange_triangle' />
+      </OrangeTriangle>
       <TextDescMedium>
         Bei der Sommerreise 2016 wurden die ersten Baumaßnahmen begonnen.
       </TextDescMedium>
@@ -111,8 +118,9 @@ export const Done = () => (
           <StageText>Komplette Tapezierung</StageText>
           <StageText>Teppich verlegt</StageText>
         </StageContainer>
+        <OrangeCircle />
       </StagesWrapper>
-      <Header>Das Computerraumprojekt</Header>
+      <Header>Projekt: Computerraum</Header>
       <FirstTextDesc>
         Im 21. Jahrhundert ist eine EDV basierte Bildung unablässig. In der
         gesamten Einrichtung war ein solcher Bildungsraum nicht vorhanden. Uns

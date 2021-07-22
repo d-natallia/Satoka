@@ -36,7 +36,7 @@ export const Title = styled(Text)`
     font-size: 45px;
     line-height: 54px;
     width: 304px;
-    margin-top: 46px;
+    margin-top: 60px;
     margin-left: 6px;
   }
 `;

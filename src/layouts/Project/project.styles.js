@@ -168,6 +168,12 @@ export const OptionTitle = styled.div`
   line-height: 86px;
   color: ${COLORS.orange};
   margin-bottom: 70px;
+
+  ${SCREEN_QUERIES.small} {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const OptionText = styled.div`
@@ -175,4 +181,32 @@ export const OptionText = styled.div`
   font-size: 36px;
   line-height: 45px;
   color: ${COLORS.black};
+
+  ${SCREEN_QUERIES.small} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+`;
+
+export const BlankCircle = styled.div`
+  width: 500px;
+  position: absolute;
+  right: -90px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  ${SCREEN_QUERIES.large} {
+    width: 300px;
+  }
+
+  ${SCREEN_QUERIES.medium} {
+    width: 200px;
+  }
+
+  ${SCREEN_QUERIES.small} {
+    display: none;
+  }
 `;

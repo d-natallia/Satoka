@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom';
+
 import BlackTriangleImg from '../../assets/images/triangle_blank.svg';
+import ArrowImg from '../../assets/images/arrow.gif';
 
 import { Title } from '../../components/Text';
 
@@ -23,6 +26,7 @@ import {
   ReasonContainerText,
   ReasonCircle,
   LinkTitle,
+  ArrowWrapper,
 } from './motto.styles';
 
 const REASONS = [
@@ -53,14 +57,12 @@ export const Motto = () => (
       <CircleBlue />
       <OrangeCircle />
       <TitleBlockedText>
-        <p>
-          Kindern ein sicheres Zuhause zu geben - das ist unsere Aufgabe. Der
-          Satoka Kinderhilfe e.V. ist eine Organisation, die es sich zur Aufgabe
-          macht, sozialschwachen erkrankten ukrainischen Kindern ein sicheres
-          Zuhause zu bieten. Als ein sowohl politisch, als auch konfessionell
-          unabhängiges Sozialwerk haben wir die Möglichkeit, die Welt ein
-          bisschen besser zu machen.{' '}
-        </p>
+        Kindern ein sicheres Zuhause zu geben - das ist unsere Aufgabe. Der
+        Satoka Kinderhilfe e.V. ist eine Organisation, die es sich zur Aufgabe
+        macht, sozialschwachen erkrankten ukrainischen Kindern ein sicheres
+        Zuhause zu bieten. Als ein sowohl politisch, als auch konfessionell
+        unabhängiges Sozialwerk haben wir die Möglichkeit, die Welt ein bisschen
+        besser zu machen.{' '}
         <BlankTriangle>
           <img src={BlackTriangleImg} alt='triangle' />
         </BlankTriangle>
@@ -80,7 +82,7 @@ export const Motto = () => (
       <ReasonsTitle>Gründe, warum wir helfen können und müssen!</ReasonsTitle>
       <ReasonsWrapper>
         {REASONS.map(({ title, text }, index) => (
-          <ReasonContainer>
+          <ReasonContainer key={index}>
             <ReasonContainerRow>
               <ReasonContainerIndex>{index + 1}.</ReasonContainerIndex>
               <ReasonContainerTitle>{title}</ReasonContainerTitle>
@@ -93,8 +95,13 @@ export const Motto = () => (
         <ReasonCircle />
       </ReasonsWrapper>
     </PageFullContainer>
-    {/* <PageFullContainer noBorder wrapperStyle={{ paddingTop: 0 }}>
-      <LinkTitle>3 Projekte, bei denen ihr mitmachen könnt!</LinkTitle>
-    </PageFullContainer> */}
+    <PageFullContainer noBorder wrapperStyle={{ paddingTop: 0 }}>
+      <LinkTitle>3 Projekte, bei denen ihr mitmachen könnt! </LinkTitle>
+      <ArrowWrapper>
+        <Link to='/donate'>
+          <img src={ArrowImg} alt='arrow-img' />
+        </Link>
+      </ArrowWrapper>
+    </PageFullContainer>
   </PageWrapper>
 );

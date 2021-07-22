@@ -193,6 +193,7 @@ export const AboutQuestionTitle = styled(Text)`
 `;
 
 export const AboutQuestionText = styled(Text)`
+  font-family: Gothic A1;
   font-weight: normal;
   font-size: 36px;
   line-height: 48px;

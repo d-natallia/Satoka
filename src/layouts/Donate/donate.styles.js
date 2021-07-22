@@ -11,6 +11,7 @@ export const DonateText = styled(Text)`
   line-height: 48px;
   margin-top: ${(p) => p.marginTop}px;
   margin-bottom: ${(p) => p.marginBottom}px;
+  font-family: Gothic A1 sans-serif;
 
   ${PRE_LARGE_QUERY} {
     font-size: 22px;
@@ -48,7 +49,7 @@ export const DonateMiddleContainer = styled.div`
     }
   }
 
-  ${SCREEN_QUERIES} {
+  ${SCREEN_QUERIES.medium} {
     flex-direction: column;
 
     & div {
@@ -98,13 +99,13 @@ export const StagesWrapper = styled.div`
 
   ${SCREEN_QUERIES.medium} {
     margin-top: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 
   ${SCREEN_QUERIES.small} {
     flex-direction: column;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -199,9 +200,10 @@ export const DonateOptionText = styled(DonateText)`
 export const MiddleDonateText = styled(DonateOptionText)`
   margin-top: 190px;
   margin-bottom: 145px;
+  align-self: flex-end;
+  text-align: right;
 
   ${PRE_LARGE_QUERY} {
-    align-self: flex-start;
     margin-top: 120px;
     margin-bottom: 90px;
   }
@@ -209,6 +211,8 @@ export const MiddleDonateText = styled(DonateOptionText)`
   ${SCREEN_QUERIES.medium} {
     margin-top: 100px;
     margin-bottom: 70px;
+    align-self: flex-start;
+    text-align: left;
   }
 
   ${SCREEN_QUERIES.small} {

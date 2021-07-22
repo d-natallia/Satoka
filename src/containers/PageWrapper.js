@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 import FooterLogoImg from '../assets/images/footer_logo.png';
+import BurgerImg from '../assets/images/burger.svg';
 
 import { COLORS, SCREEN_QUERIES } from '../config';
 import { Text } from '../components/Text';
@@ -37,6 +39,8 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   padding-left: 18px;
+  z-index: 101;
+  cursor: pointer;
 
   ${SCREEN_QUERIES.large} {
     width: 400px;
@@ -50,6 +54,21 @@ const Header = styled.div`
 
   ${SCREEN_QUERIES.small} {
     display: none;
+  }
+`;
+
+const Burger = styled.div`
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  left: 15px;
+  top: 15px;
+  z-index: 10000;
+
+  & img {
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -111,7 +130,9 @@ const FooterWrapper = styled.footer`
   }
 
   ${SCREEN_QUERIES.small} {
-    height: 90px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 `;
 
@@ -132,8 +153,10 @@ const FooterLinksWrapper = styled.div`
   }
 
   ${SCREEN_QUERIES.small} {
-    width: 300px;
-    height: 60px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+    margin-left: 50px;
   }
 `;
 
@@ -152,8 +175,8 @@ const FooterItemWrapper = styled.div`
 
   ${SCREEN_QUERIES.small} {
     margin-right: 40px;
-    margin-bottom: 5px;
-    width: 100px;
+    margin-bottom: 20px;
+    width: 100%;
   }
 `;
 
@@ -174,8 +197,9 @@ const FooterItemTitle = styled(Text)`
   }
 
   ${SCREEN_QUERIES.small} {
-    font-size: 8px;
-    line-height: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
   }
 `;
 
@@ -195,8 +219,8 @@ const FooterItemText = styled(Text)`
   }
 
   ${SCREEN_QUERIES.small} {
-    font-size: 7px;
-    line-height: 9px;
+    font-size: 16px;
+    line-height: 20px;
   }
 `;
 
@@ -215,13 +239,82 @@ const FooterLogo = styled.div`
   }
 
   ${SCREEN_QUERIES.small} {
-    width: 60px;
-    height: 40px;
+    display: none;
   }
 
   & img {
     width: 100%;
     height: 100%;
+  }
+`;
+
+const OpenedNav = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: ${COLORS.orange};
+  z-index: 100;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 100px;
+
+  ${SCREEN_QUERIES.large} {
+    font-size: 100px;
+    line-height: 112px;
+    padding-top: 200px;
+  }
+`;
+
+const RoutesContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  ${SCREEN_QUERIES.small} {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
+`;
+
+const RoutesStage = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+`;
+
+const Route = styled(Text)`
+  font-weight: bold;
+  font-size: 144px;
+  line-height: 156px;
+  text-decoration: none;
+  color: ${(p) => (p.active ? COLORS.white : COLORS.black)};
+  cursor: pointer;
+
+  &:hover {
+    color: ${COLORS.white};
+    transition: 0.2s all;
+  }
+
+  ${SCREEN_QUERIES.large} {
+    font-size: 100px;
+    line-height: 112px;
+  }
+
+  ${SCREEN_QUERIES.medium} {
+    font-size: 80px;
+    line-height: 82px;
+    margin-bottom: 40px;
+  }
+
+  ${SCREEN_QUERIES.small} {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
   }
 `;
 
@@ -239,10 +332,24 @@ function getWindowDimensions() {
   return width;
 }
 
-export const PageWrapper = ({ children }) => {
+const FIRST_LINKS_STAGE = [
+  { name: 'About', link: '/' },
+  { name: 'Zweck', link: '/motto' },
+  { name: 'Anfang', link: '/donate' },
+  { name: 'Kontakt', link: '/contacts' },
+];
+
+const SECOND_LINKS_STAGE = [
+  { name: 'Done', link: '/done' },
+  { name: 'Projekte', link: '/project' },
+  { name: 'Spenden', link: '/donation' },
+];
+
+export const PageWrapper = ({ children, noFooter = false }) => {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
+  const history = useHistory();
 
   useEffect(() => {
     function handleResize() {
@@ -254,27 +361,75 @@ export const PageWrapper = ({ children }) => {
   }, []);
 
   console.log(windowDimensions);
+
+  const [openNav, setOpenNav] = useState(false);
+
+  const onNav = () => {
+    if (!openNav) {
+      document.body.classList.add('stop-scrolling');
+      setOpenNav(true);
+    } else {
+      document.body.classList.remove('stop-scrolling');
+      setOpenNav(false);
+    }
+  };
+
+  const onLinkClick = (link) => {
+    document.body.classList.remove('stop-scrolling');
+    history.push(link);
+  };
+
   return (
     <Wrapper>
+      {openNav && (
+        <OpenedNav>
+          <RoutesContainer>
+            <RoutesStage
+              style={windowDimensions > 750 ? { marginLeft: 50 } : {}}
+            >
+              {FIRST_LINKS_STAGE.map(({ name, link }, index) => (
+                <Route key={index} onClick={() => onLinkClick(link)}>
+                  {name}
+                </Route>
+              ))}
+            </RoutesStage>
+            <RoutesStage>
+              {SECOND_LINKS_STAGE.map(({ name, link }, index) => (
+                <Route key={index} onClick={() => onLinkClick(link)}>
+                  {name}
+                </Route>
+              ))}
+            </RoutesStage>
+          </RoutesContainer>
+        </OpenedNav>
+      )}
       <Divider />
-      <Header>
-        <Circle />
-        <HeaderText>Satoka Kinderhilfe e.V.</HeaderText>
-      </Header>
+      {windowDimensions > 750 ? (
+        <Header onClick={onNav}>
+          <Circle />
+          <HeaderText>Satoka Kinderhilfe e.V.</HeaderText>
+        </Header>
+      ) : (
+        <Burger onClick={onNav}>
+          <img src={BurgerImg} alt='burger' />
+        </Burger>
+      )}
       {children}
-      <FooterWrapper>
-        <FooterLinksWrapper>
-          {links.map(({ title, text }) => (
-            <FooterItemWrapper key={text}>
-              <FooterItemTitle>{title}</FooterItemTitle>
-              <FooterItemText>{text}</FooterItemText>
-            </FooterItemWrapper>
-          ))}
-        </FooterLinksWrapper>
-        <FooterLogo>
-          <img src={FooterLogoImg} alt='footer-logo' />
-        </FooterLogo>
-      </FooterWrapper>
+      {!noFooter && (
+        <FooterWrapper>
+          <FooterLinksWrapper>
+            {links.map(({ title, text }) => (
+              <FooterItemWrapper key={text}>
+                <FooterItemTitle>{title}</FooterItemTitle>
+                <FooterItemText>{text}</FooterItemText>
+              </FooterItemWrapper>
+            ))}
+          </FooterLinksWrapper>
+          <FooterLogo>
+            <img src={FooterLogoImg} alt='footer-logo' />
+          </FooterLogo>
+        </FooterWrapper>
+      )}
     </Wrapper>
   );
 };

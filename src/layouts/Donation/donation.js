@@ -1,8 +1,10 @@
 import React from 'react';
 
 import SpendenImg from '../../assets/images/spenden.png';
+import SpendenChildren from '../../assets/images/spenden_children.png';
+import ArrowDownImg from '../../assets/images/arrow_down.svg';
 
-import { Title, Header } from '../../components/Text';
+import { Title } from '../../components/Text';
 import { PageWrapper } from '../../containers/PageWrapper';
 import { PageFullContainer } from '../../containers/PageContainer';
 
@@ -14,6 +16,9 @@ import {
   OptionContainer,
   OptionTitle,
   OptionText,
+  ArrowImage,
+  EndingTitle,
+  EndingText,
 } from './donation.styles';
 
 const OPTIONS = [
@@ -35,6 +40,12 @@ const OPTIONS = [
   },
 ];
 
+const ArrowImageComponent = (
+  <ArrowImage>
+    <img src={ArrowDownImg} alt='arrow-right' />
+  </ArrowImage>
+);
+
 export const Donation = () => (
   <PageWrapper>
     <PageFullContainer noBorder style={{ marginBottom: 0 }}>
@@ -55,13 +66,25 @@ export const Donation = () => (
         über die Verwendung Ihrer Gelder.
       </MainText>
       <OptionsWrapper>
-        {OPTIONS.map(({ title, text }) => (
+        {OPTIONS.map(({ title, text }, index) => (
           <OptionContainer>
             <OptionTitle>{title}</OptionTitle>
             <OptionText>{text}</OptionText>
+            {index !== OPTIONS.length - 1 && ArrowImageComponent}
           </OptionContainer>
         ))}
       </OptionsWrapper>
+    </PageFullContainer>
+    <MainImageWrapper>
+      <img src={SpendenChildren} alt='spenden-children' />
+    </MainImageWrapper>
+    <PageFullContainer noBorder>
+      <EndingTitle>Nehmen wir Sachspenden an?</EndingTitle>
+      <EndingText>
+        Da es zuletzt vermehrt zu Missverständnissen kam, nehmen wir zurzeit
+        keine Sachspenden an, bedanken uns aber sehr, für die großzügigen Gaben
+        in der Vergangenheit!
+      </EndingText>
     </PageFullContainer>
   </PageWrapper>
 );

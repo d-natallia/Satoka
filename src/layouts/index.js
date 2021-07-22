@@ -4,3 +4,4 @@ export { Project } from './Project/project';
 export { Done } from './Done/done';
 export { Donate } from './Donate/donate';
 export { Donation } from './Donation/donation';
+export { Contacts } from './Contacts/contacts';

@@ -4,11 +4,15 @@ import { COLORS, SCREEN_QUERIES } from '../../config';
 import { Text } from '../../components/Text';
 
 export const BannerWrapper = styled.div`
-  width: 100%;
   background-color: ${COLORS.blue};
   position: relative;
   padding-top: 109px;
   padding-bottom: 130px;
+
+  ${SCREEN_QUERIES.small} {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 `;
 
 export const BannerTitle = styled(Text)`
@@ -32,9 +36,11 @@ export const BannerTitle = styled(Text)`
   }
 
   ${SCREEN_QUERIES.small} {
-    font-size: 60px;
-    line-height: 75px;
-    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    margin-right: 20px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -53,6 +59,11 @@ export const BannerText = styled(Text)`
   ${SCREEN_QUERIES.medium} {
     font-size: 40px;
     line-height: 55px;
+  }
+
+  ${SCREEN_QUERIES.small} {
+    font-size: 20px;
+    line-height: 25px;
   }
 `;
 
@@ -187,6 +198,7 @@ export const StagesWrapper = styled.div`
   display: flex;
   margin-top: 130px;
   margin-bottom: 400px;
+  position: relative;
 
   ${SCREEN_QUERIES.medium} {
     margin-top: 70px;
@@ -209,6 +221,7 @@ export const StageContainer = styled.div`
 
   ${SCREEN_QUERIES.small} {
     margin-bottom: 30px;
+    width: 100%;
   }
 `;
 
@@ -293,4 +306,39 @@ export const MiddleTextDesc = styled(TextDesc)`
     margin-top: 50px;
     margin-bottom: 30px;
   }
+`;
+
+export const OrangeTriangle = styled.div`
+  width: 577.11px;
+  height: 577.11px;
+  position: absolute;
+  z-index: -1;
+  left: 450px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  ${SCREEN_QUERIES.medium} {
+    width: 300px;
+    height: 300px;
+    top: 200px;
+    left: 250px;
+  }
+
+  ${SCREEN_QUERIES.small} {
+    display: none;
+  }
+`;
+
+export const OrangeCircle = styled.div`
+  position: absolute;
+  width: 153px;
+  height: 153px;
+  background-color: ${COLORS.orange};
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -200px;
+  left: 35%;
 `;

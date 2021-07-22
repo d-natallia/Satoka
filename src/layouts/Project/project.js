@@ -1,6 +1,7 @@
 import PaintImg from '../../assets/images/paint.png';
 import PaintBeach from '../../assets/images/project_beach.png';
 import PaintHome from '../../assets/images/project_home.png';
+import HalfCircle from '../../assets/images/half_circle.svg';
 
 import { Title } from '../../components/Text';
 import { PageWrapper } from '../../containers/PageWrapper';
@@ -17,11 +18,15 @@ import {
   OptionsContainer,
   OptionTitle,
   OptionText,
+  BlankCircle,
 } from './project.styles';
 
 export const Project = () => (
   <PageWrapper>
     <PageFullContainer noBorder>
+      <BlankCircle>
+        <img src={HalfCircle} alt='half_circle' />
+      </BlankCircle>
       <Title>Projekte</Title>
       <TitleDesc>
         Seit 2016 wurden fünf Projekte ins Leben gerufen. Manche sind noch in

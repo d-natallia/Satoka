@@ -48,6 +48,7 @@ export const TitleBlockedText = styled.div`
   align-self: flex-end;
   margin: 500px 80px 219px 0px;
   position: relative;
+  font-family: Gothic A1;
 
   ${SCREEN_QUERIES.large} {
     margin-top: 400px;
@@ -107,7 +108,7 @@ export const BlankCircle = styled.div`
   ${SCREEN_QUERIES.small} {
     width: 60px;
     height: 60px;
-    left: 300px;
+    left: 250px;
     top: 60px;
   }
 `;
@@ -166,7 +167,7 @@ export const OrangeCircle = styled.div`
     width: 200px;
     height: 200px;
     top: 370px;
-    left: 200px;
+    left: 100px;
   }
 `;
 
@@ -377,6 +378,7 @@ export const ReasonContainerText = styled(Text)`
   color: ${COLORS.black};
   width: 100%;
   margin-bottom: 50px;
+  font-family: Gothic A1;
 
   ${HUGE_SIZE} {
     font-size: 25px;
@@ -426,4 +428,46 @@ export const LinkTitle = styled(Text)`
   font-weight: bold;
   font-size: 144px;
   line-height: 156px;
+
+  ${SCREEN_QUERIES.large} {
+    font-size: 100px;
+    line-height: 112px;
+  }
+
+  ${SCREEN_QUERIES.medium} {
+    font-size: 70px;
+    line-height: 76px;
+  }
+
+  ${SCREEN_QUERIES.small} {
+    font-size: 40px;
+    line-height: 48px;
+  }
+`;
+
+export const ArrowWrapper = styled.div`
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  cursor: pointer;
+  top: 150px;
+  right: 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  ${SCREEN_QUERIES.large} {
+    width: 150px;
+    height: 150px;
+  }
+
+  ${PRE_MEDIUM} {
+    position: relative;
+    align-self: flex-end;
+    padding-bottom: 140px;
+    margin-top: -120px;
+  }
 `;

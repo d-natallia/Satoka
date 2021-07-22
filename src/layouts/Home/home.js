@@ -1,4 +1,4 @@
-import ArrowDownImg from '../../assets/images/arrow_down.svg';
+import ArrowDownGif from '../../assets/images/arrow.gif';
 
 import { PageWrapper } from '../../containers/PageWrapper';
 import {
@@ -69,7 +69,7 @@ export const Home = () => (
         <AboutFigures>
           <AboutFigureCircle />
           <AboutFigureArrow>
-            <img src={ArrowDownImg} alt='arrow-down' />
+            <img src={ArrowDownGif} alt='arrow-down' />
           </AboutFigureArrow>
         </AboutFigures>
         <AboutDescriptionContainer>
