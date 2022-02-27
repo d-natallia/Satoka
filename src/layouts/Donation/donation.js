@@ -17,8 +17,6 @@ import {
   OptionTitle,
   OptionText,
   ArrowImage,
-  EndingTitle,
-  EndingText,
 } from './donation.styles';
 
 const OPTIONS = [
