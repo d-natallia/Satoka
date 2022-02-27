@@ -81,7 +81,6 @@ export const OptionContainerSecond = styled(OptionContainer)`
 `;
 
 export const OptionTitle = styled(Text)`
-  font-weight: bold;
   font-size: 36px;
   line-height: 45px;
   margin-bottom: 60px;

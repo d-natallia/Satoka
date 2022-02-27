@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import BlackTriangleImg from '../../assets/images/triangle_blank.svg';
-import ArrowImg from '../../assets/images/arrow.gif';
+import ArrowImg from '../../assets/images/arrow_down.svg';
 
 import { Title } from '../../components/Text';
 

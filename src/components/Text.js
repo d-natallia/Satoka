@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { COLORS, SCREEN_QUERIES } from '../config';
 
 export const Text = styled.p`
-  font-family: Lato sans-serif;
+  font-family: 'Lato' sans-serif;
   font-style: normal;
   margin: 0;
   color: ${COLORS.black};

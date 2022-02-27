@@ -11,7 +11,7 @@ export const DonateText = styled(Text)`
   line-height: 48px;
   margin-top: ${(p) => p.marginTop}px;
   margin-bottom: ${(p) => p.marginBottom}px;
-  font-family: Gothic A1 sans-serif;
+  font-family: 'Gothic A1' sans-serif;
 
   ${PRE_LARGE_QUERY} {
     font-size: 22px;
@@ -49,7 +49,7 @@ export const DonateMiddleContainer = styled.div`
     }
   }
 
-  ${SCREEN_QUERIES.medium} {
+  ${SCREEN_QUERIES.preMedium} {
     flex-direction: column;
 
     & div {
@@ -146,20 +146,20 @@ export const StageText = styled(Text)`
   line-height: 44px;
   color: ${COLORS.black};
   position: relative;
-  padding-left: 25px;
+  padding-left: 20px;
 
   &::before {
     content: '●';
     position: absolute;
     left: 0px;
-    font-size: 25px;
+    font-size: 15px;
 
     ${SCREEN_QUERIES.medium} {
-      font-size: 20px;
+      font-size: 12px;
     }
 
     ${SCREEN_QUERIES.small} {
-      font-size: 16px;
+      font-size: 8px;
     }
   }
 

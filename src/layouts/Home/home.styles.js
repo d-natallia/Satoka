@@ -35,7 +35,7 @@ export const MainTitle = styled(Text)`
     margin-left: 30px;
   }
 
-  ${SCREEN_QUERIES} {
+  ${SCREEN_QUERIES.small} {
     font-size: 45px;
     line-height: 54px;
     font-weight: 300;
@@ -43,11 +43,10 @@ export const MainTitle = styled(Text)`
 `;
 
 export const MainDescText = styled(Text)`
-  font-family: Gothic A1;
+  font-family: 'Gothic A1';
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
-  line-height: 48px;
   color: ${COLORS.black};
   text-align: left;
   max-width: 910px;
@@ -78,7 +77,6 @@ export const MainDescTextBold = styled(MainDescText)`
   font-weight: 500;
   text-align: right;
   font-size: 50px;
-  line-height: 62px;
   max-width: 1300px;
   align-self: flex-end;
 
@@ -193,7 +191,7 @@ export const AboutQuestionTitle = styled(Text)`
 `;
 
 export const AboutQuestionText = styled(Text)`
-  font-family: Gothic A1;
+  font-family: 'Gothic A1';
   font-weight: normal;
   font-size: 36px;
   line-height: 48px;

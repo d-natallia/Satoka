@@ -48,7 +48,7 @@ export const TitleBlockedText = styled.div`
   align-self: flex-end;
   margin: 500px 80px 219px 0px;
   position: relative;
-  font-family: Gothic A1;
+  font-family: 'Gothic A1';
 
   ${SCREEN_QUERIES.large} {
     margin-top: 400px;
@@ -378,7 +378,7 @@ export const ReasonContainerText = styled(Text)`
   color: ${COLORS.black};
   width: 100%;
   margin-bottom: 50px;
-  font-family: Gothic A1;
+  font-family: 'Gothic A1';
 
   ${HUGE_SIZE} {
     font-size: 25px;
@@ -391,8 +391,8 @@ export const ReasonContainerText = styled(Text)`
   }
 
   ${SCREEN_QUERIES.medium} {
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 20px;
+    line-height: 25px;
   }
 
   ${SCREEN_QUERIES.small} {

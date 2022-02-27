@@ -8,6 +8,15 @@ import BurgerImg from '../assets/images/burger.svg';
 import { COLORS, SCREEN_QUERIES } from '../config';
 import { Text } from '../components/Text';
 
+export const Links = [
+  { title: 'Telefon', text: '+49 160 168 88 99' },
+  { title: 'E-Mail', text: 'verein@satoka.org' },
+  { title: 'Instagram', text: '@satokaorg' },
+  { title: 'Name', text: 'Satoka Kinderhilfe e.V.' },
+  { title: 'IBAN', text: 'DE63 6809 0000 0038 4041 05' },
+  { title: 'BLZ', text: '68090000' },
+];
+
 const Wrapper = styled.div`
   position: relative;
   padding-left: 9px;
@@ -30,7 +39,7 @@ const Divider = styled.div`
 `;
 
 const Header = styled.div`
-  position: absolute;
+  position: fixed;
   width: 700px;
   height: 123px;
   background-color: ${COLORS.orange};
@@ -181,7 +190,7 @@ const FooterItemWrapper = styled.div`
 `;
 
 const FooterItemTitle = styled(Text)`
-  font-family: Gothic A1 sans-serif;
+  font-family: 'Gothic A1' sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -204,7 +213,7 @@ const FooterItemTitle = styled(Text)`
 `;
 
 const FooterItemText = styled(Text)`
-  font-family: Gothic A1 sans-serif;
+  font-family: 'Gothic A1' sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -245,6 +254,7 @@ const FooterLogo = styled.div`
   & img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 `;
 
@@ -256,13 +266,12 @@ const OpenedNav = styled.div`
   z-index: 100;
   overflow: hidden;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 100px;
 
   ${SCREEN_QUERIES.large} {
     font-size: 100px;
     line-height: 112px;
-    padding-top: 200px;
   }
 `;
 
@@ -271,7 +280,8 @@ const RoutesContainer = styled.div`
   width: 100%;
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  margin-right: 50px;
 
   ${SCREEN_QUERIES.small} {
     flex-direction: column;
@@ -318,15 +328,6 @@ const Route = styled(Text)`
   }
 `;
 
-const links = [
-  { title: 'Telefon', text: '+49 160 168 88 99' },
-  { title: 'E-Mail', text: 'satoka.kinderhilfe@gmail.com' },
-  { title: 'Instagram', text: '@satokaorg' },
-  { title: 'Institut', text: 'Sparkasse Nürnberg' },
-  { title: 'IBAN', text: 'DE00 0000 0000 0000 0011 15' },
-  { title: 'BIC', text: 'COLSDE33' },
-];
-
 function getWindowDimensions() {
   const { innerWidth: width } = window;
   return width;
@@ -335,7 +336,7 @@ function getWindowDimensions() {
 const FIRST_LINKS_STAGE = [
   { name: 'About', link: '/' },
   { name: 'Zweck', link: '/motto' },
-  { name: 'Anfang', link: '/donate' },
+  { name: 'Donate', link: '/donate' },
   { name: 'Kontakt', link: '/contacts' },
 ];
 
@@ -360,8 +361,6 @@ export const PageWrapper = ({ children, noFooter = false }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  console.log(windowDimensions);
-
   const [openNav, setOpenNav] = useState(false);
 
   const onNav = () => {
@@ -385,7 +384,7 @@ export const PageWrapper = ({ children, noFooter = false }) => {
         <OpenedNav>
           <RoutesContainer>
             <RoutesStage
-              style={windowDimensions > 750 ? { marginLeft: 50 } : {}}
+              style={windowDimensions > 750 ? { marginRight: 50 } : {}}
             >
               {FIRST_LINKS_STAGE.map(({ name, link }, index) => (
                 <Route key={index} onClick={() => onLinkClick(link)}>
@@ -418,7 +417,7 @@ export const PageWrapper = ({ children, noFooter = false }) => {
       {!noFooter && (
         <FooterWrapper>
           <FooterLinksWrapper>
-            {links.map(({ title, text }) => (
+            {Links.map(({ title, text }) => (
               <FooterItemWrapper key={text}>
                 <FooterItemTitle>{title}</FooterItemTitle>
                 <FooterItemText>{text}</FooterItemText>

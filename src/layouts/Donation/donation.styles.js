@@ -7,17 +7,19 @@ const PRE_MEDIUM_QUERY = `@media (max-width: 1450px)`;
 
 export const MainImageWrapper = styled.div`
   width: 100%;
+  display: flex;
 
   & img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
   }
 `;
 
 export const DonationText = styled(Text)`
   font-size: 36px;
   line-height: 48px;
-  font-family: Gothic A1 sans-serif;
+  font-family: 'Gothic A1' sans-serif;
 
   ${SCREEN_QUERIES.large} {
     font-size: 32px;
