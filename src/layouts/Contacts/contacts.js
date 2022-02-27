@@ -1,5 +1,7 @@
-import { PageWrapper } from '../../containers/PageWrapper';
-import { PageFullContainer } from '../../containers/PageContainer';
+import { chunk } from "lodash";
+import { PageWrapper } from "../../containers/PageWrapper";
+import { PageFullContainer } from "../../containers/PageContainer";
+import { Links } from "../../containers/PageWrapper";
 
 import {
   TitleHeader,
@@ -13,7 +15,7 @@ import {
   OptionText,
   BottomTitle,
   CircleBlue,
-} from './contacts.styles';
+} from "./contacts.styles";
 
 export const Contacts = () => (
   <PageWrapper noFooter>
@@ -61,36 +63,18 @@ export const Contacts = () => (
       }}
     >
       <OptionsWrapperSecond>
-        <OptionContainer>
-          <OptionContainerSecond>
-            <OptionTitleSecond>Telefon:</OptionTitleSecond>
-            <OptionText>+49 160 168 88 99</OptionText>
-          </OptionContainerSecond>
+        {chunk(Links, 2).map((item) => (
           <OptionContainer>
-            <OptionTitleSecond>Institut:</OptionTitleSecond>
-            <OptionText>Sparkasse Nürnberg</OptionText>
+            <OptionContainerSecond>
+              <OptionTitleSecond>{item[0].title}</OptionTitleSecond>
+              <OptionText>{item[0].text}</OptionText>
+            </OptionContainerSecond>
+            <OptionContainer>
+              <OptionTitleSecond>{item[1].title}</OptionTitleSecond>
+              <OptionText>{item[1].text}</OptionText>
+            </OptionContainer>
           </OptionContainer>
-        </OptionContainer>
-        <OptionContainer>
-          <OptionContainerSecond>
-            <OptionTitleSecond>Email:</OptionTitleSecond>
-            <OptionText>satoka.kinderhilfe@gmail.com</OptionText>
-          </OptionContainerSecond>
-          <OptionContainer>
-            <OptionTitleSecond>IBAN:</OptionTitleSecond>
-            <OptionText>DE00 0000 0000 0000 0011 15</OptionText>
-          </OptionContainer>
-        </OptionContainer>
-        <OptionContainer>
-          <OptionContainerSecond>
-            <OptionTitleSecond>Instagram:</OptionTitleSecond>
-            <OptionText>@satokaorg</OptionText>
-          </OptionContainerSecond>
-          <OptionContainer>
-            <OptionTitleSecond>BIC:</OptionTitleSecond>
-            <OptionText>COLSDE33</OptionText>
-          </OptionContainer>
-        </OptionContainer>
+        ))}
       </OptionsWrapperSecond>
     </PageFullContainer>
     <PageFullContainer noBorder>

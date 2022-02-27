@@ -17,8 +17,6 @@ import {
   OptionTitle,
   OptionText,
   ArrowImage,
-  EndingTitle,
-  EndingText,
 } from './donation.styles';
 
 const OPTIONS = [
@@ -78,13 +76,5 @@ export const Donation = () => (
     <MainImageWrapper>
       <img src={SpendenChildren} alt='spenden-children' />
     </MainImageWrapper>
-    <PageFullContainer noBorder>
-      <EndingTitle>Nehmen wir Sachspenden an?</EndingTitle>
-      <EndingText>
-        Da es zuletzt vermehrt zu Missverständnissen kam, nehmen wir zurzeit
-        keine Sachspenden an, bedanken uns aber sehr, für die großzügigen Gaben
-        in der Vergangenheit!
-      </EndingText>
-    </PageFullContainer>
   </PageWrapper>
 );

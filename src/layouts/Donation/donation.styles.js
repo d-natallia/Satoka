@@ -7,17 +7,19 @@ const PRE_MEDIUM_QUERY = `@media (max-width: 1450px)`;
 
 export const MainImageWrapper = styled.div`
   width: 100%;
+  display: flex;
 
   & img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
   }
 `;
 
 export const DonationText = styled(Text)`
   font-size: 36px;
   line-height: 48px;
-  font-family: Gothic A1 sans-serif;
+  font-family: 'Gothic A1' sans-serif;
 
   ${SCREEN_QUERIES.large} {
     font-size: 32px;
@@ -185,48 +187,5 @@ export const ArrowImage = styled.div`
     & img {
       transform: rotate(0deg);
     }
-  }
-`;
-
-export const EndingTitle = styled(Text)`
-  font-size: 72px;
-  line-height: 86px;
-  margin-bottom: 50px;
-
-  ${SCREEN_QUERIES.large} {
-    font-size: 80px;
-    line-height: 96px;
-  }
-
-  ${SCREEN_QUERIES.medium} {
-    font-size: 50px;
-    line-height: 62px;
-  }
-
-  ${SCREEN_QUERIES.small} {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    margin-bottom: 25px;
-  }
-`;
-
-export const EndingText = styled(Text)`
-  font-size: 36px;
-  line-height: 48px;
-
-  ${SCREEN_QUERIES.large} {
-    font-size: 32px;
-    line-height: 42px;
-  }
-
-  ${SCREEN_QUERIES.medium} {
-    font-size: 22px;
-    line-height: 25px;
-  }
-
-  ${SCREEN_QUERIES.small} {
-    font-size: 16px;
-    line-height: 20px;
   }
 `;
