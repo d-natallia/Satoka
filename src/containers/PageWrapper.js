@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
-import FooterLogoImg from '../assets/images/footer_logo.png';
-import BurgerImg from '../assets/images/burger.svg';
+import FooterLogoImg from "../assets/images/footer_logo.png";
+import BurgerImg from "../assets/images/burger.svg";
 
-import { COLORS, SCREEN_QUERIES } from '../config';
-import { Text } from '../components/Text';
+import { COLORS, SCREEN_QUERIES } from "../config";
+import { Text } from "../components/Text";
 
 export const Links = [
-  { title: 'Telefon', text: '+49 160 168 88 99' },
-  { title: 'E-Mail', text: 'verein@satoka.org' },
-  { title: 'Instagram', text: '@satokaorg' },
-  { title: 'Name', text: 'Satoka Kinderhilfe e.V.' },
-  { title: 'IBAN', text: 'DE63 6809 0000 0038 4041 05' },
-  { title: 'BLZ', text: '68090000' },
+  { title: "Telefon", text: "+49 160 168 88 99" },
+  { title: "E-Mail", text: "satokaorg@outlook.com" },
+  { title: "Instagram", text: "@satokaorg" },
+  { title: "Bank", text: "Volksbank Freiburg" },
+  { title: "IBAN", text: "DE63 6809 0000 0038 4041 05" },
+  { title: "BLZ", text: "68090000" },
 ];
 
 const Wrapper = styled.div`
@@ -190,7 +190,7 @@ const FooterItemWrapper = styled.div`
 `;
 
 const FooterItemTitle = styled(Text)`
-  font-family: 'Gothic A1' sans-serif;
+  font-family: "Gothic A1" sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -213,7 +213,7 @@ const FooterItemTitle = styled(Text)`
 `;
 
 const FooterItemText = styled(Text)`
-  font-family: 'Gothic A1' sans-serif;
+  font-family: "Gothic A1" sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -334,16 +334,17 @@ function getWindowDimensions() {
 }
 
 const FIRST_LINKS_STAGE = [
-  { name: 'About', link: '/home' },
-  { name: 'Zweck', link: '/motto' },
-  { name: 'Donate', link: '/donate' },
-  { name: 'Kontakt', link: '/contacts' },
+  { name: "Ukraine", link: "/" },
+  { name: "About", link: "/home" },
+  { name: "Donate", link: "/donate" },
+  { name: "Kontakt", link: "/contacts" },
 ];
 
 const SECOND_LINKS_STAGE = [
-  { name: 'Done', link: '/done' },
-  { name: 'Projekte', link: '/project' },
-  { name: 'Spenden', link: '/donation' },
+  { name: "Zweck", link: "/motto" },
+  { name: "Done", link: "/done" },
+  { name: "Projekte", link: "/project" },
+  { name: "Spenden", link: "/donation" },
 ];
 
 export const PageWrapper = ({ children, noFooter = false }) => {
@@ -357,24 +358,24 @@ export const PageWrapper = ({ children, noFooter = false }) => {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const [openNav, setOpenNav] = useState(false);
 
   const onNav = () => {
     if (!openNav) {
-      document.body.classList.add('stop-scrolling');
+      document.body.classList.add("stop-scrolling");
       setOpenNav(true);
     } else {
-      document.body.classList.remove('stop-scrolling');
+      document.body.classList.remove("stop-scrolling");
       setOpenNav(false);
     }
   };
 
   const onLinkClick = (link) => {
-    document.body.classList.remove('stop-scrolling');
+    document.body.classList.remove("stop-scrolling");
     history.push(link);
   };
 
@@ -410,7 +411,7 @@ export const PageWrapper = ({ children, noFooter = false }) => {
         </Header>
       ) : (
         <Burger onClick={onNav}>
-          <img src={BurgerImg} alt='burger' />
+          <img src={BurgerImg} alt="burger" />
         </Burger>
       )}
       {children}
@@ -425,7 +426,7 @@ export const PageWrapper = ({ children, noFooter = false }) => {
             ))}
           </FooterLinksWrapper>
           <FooterLogo>
-            <img src={FooterLogoImg} alt='footer-logo' />
+            <img src={FooterLogoImg} alt="footer-logo" />
           </FooterLogo>
         </FooterWrapper>
       )}
