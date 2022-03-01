@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, SCREEN_QUERIES } from '../../config';
-import { Text } from '../../components/Text';
+import { COLORS, SCREEN_QUERIES } from "../../config";
+import { Text } from "../../components/Text";
 
 export const BannerWrapper = styled.div`
   background-color: ${COLORS.blue};
@@ -73,7 +73,7 @@ export const TextDesc = styled(Text)`
   line-height: 48px;
   color: ${COLORS.black};
   max-width: 867px;
-  align-self: ${(p) => (p.end ? 'flex-end' : 'flex-start')};
+  align-self: ${(p) => (p.end ? "flex-end" : "flex-start")};
 
   ${SCREEN_QUERIES.small} {
     font-weight: normal;
@@ -253,8 +253,12 @@ export const StageText = styled(Text)`
   position: relative;
   padding-left: 25px;
 
+  ${SCREEN_QUERIES.small} {
+    padding-left: 20px;
+  }
+
   &::before {
-    content: '●';
+    content: "●";
     position: absolute;
     left: 0px;
     font-size: 25px;
@@ -264,7 +268,7 @@ export const StageText = styled(Text)`
     }
 
     ${SCREEN_QUERIES.small} {
-      font-size: 16px;
+      font-size: 10px;
     }
   }
 

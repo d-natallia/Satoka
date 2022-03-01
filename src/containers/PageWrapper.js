@@ -67,7 +67,7 @@ const Header = styled.div`
 `;
 
 const Burger = styled.div`
-  position: absolute;
+  position: fixed;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -334,7 +334,7 @@ function getWindowDimensions() {
 }
 
 const FIRST_LINKS_STAGE = [
-  { name: 'About', link: '/' },
+  { name: 'About', link: '/home' },
   { name: 'Zweck', link: '/motto' },
   { name: 'Donate', link: '/donate' },
   { name: 'Kontakt', link: '/contacts' },
