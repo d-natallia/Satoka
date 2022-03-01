@@ -13,29 +13,8 @@ export const LinkContainer = styled.div`
   position: relative;
 `;
 
-export const LinkImage = styled.div`
-  position: absolute;
-  left: 1350px;
-  top: -42px;
-  align-items: center;
-  width: 283px;
-  height: 220px;
-  transform: rotate(-90deg);
-
-  ${SCREEN_QUERIES.large} {
-    width: 220px;
-    height: 170px;
-
-    & img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-`;
-
 export const LinkTitle = styled(Text)`
   & a {
-    font-family: "Lato";
     font-style: normal;
     font-weight: bold;
     font-size: 144px;
@@ -83,6 +62,7 @@ export const MainTextContainer = styled.div`
 
   ${SCREEN_QUERIES.small} {
     margin-bottom: 30px;
+    margin-top: 30px;
   }
 `;
 
@@ -286,7 +266,6 @@ export const ReasonsWrapper = styled.div`
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 200px;
   margin-top: 70px;
 
   ${SCREEN_QUERIES.medium} {

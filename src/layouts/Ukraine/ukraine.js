@@ -1,5 +1,4 @@
 import UkraineImg from "../../assets/images/warintheukraine.png";
-import ArrowDown from "../../assets/images/arrow_down.svg";
 import { PageWrapper } from "../../containers/PageWrapper";
 import { PageFullContainer } from "../../containers/PageContainer";
 import { Title, Header } from "../../components/Text";
@@ -7,7 +6,6 @@ import { Title, Header } from "../../components/Text";
 import {
   LinkContainer,
   LinkTitle,
-  LinkImage,
   ImageContainer,
   MainTextContainer,
   MainText,
@@ -72,9 +70,6 @@ export const Ukraine = () => (
             Заявка для беженцев
           </a>
         </LinkTitle>
-        {/* <LinkImage>
-          <img src={ArrowDown} alt="arrow" />
-        </LinkImage> */}
       </LinkContainer>
     </PageFullContainer>
     <ImageContainer>
@@ -101,7 +96,8 @@ export const Ukraine = () => (
         <BlockBlank>
           <p>Unsere Bankdaten:</p>
           <br />
-          <p> Satoka Kinderhilfe e.V. DE63 6809 0000 0038 4041 05 68090000</p>
+          <p> Satoka Kinderhilfe e.V.</p>
+          <p>DE63 6809 0000 0038 4041 05 68090000</p>
         </BlockBlank>
         <BlockFilled>
           <p>
@@ -131,7 +127,7 @@ export const Ukraine = () => (
         Webseite aufgelistet. Als ein eingetragener Verein können wir Ihnen
         selbstverständlich auch offizielle Spendenbescheinigungen ausstellen.
       </MainText>
-      <Header style={{ marginTop: 30 }}>Was kann ich noch helfen?</Header>
+      <Header style={{ marginTop: 30 }}>Wie kann ich noch helfen?</Header>
       <ReasonsWrapper>
         {REASONS.map(({ title, text }, index) => (
           <ReasonContainer key={index}>
