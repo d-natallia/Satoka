@@ -40,7 +40,7 @@ export const Contacts = () => (
         <OptionContainer>
           <OptionTitle>Vereinsvertreter:</OptionTitle>
           <OptionText>Vadym Kaushansky</OptionText>
-          <OptionText>+49 175 30017300</OptionText>
+          <OptionText>+49 160 168 88 99</OptionText>
         </OptionContainer>
         <OptionContainer>
           <OptionText>Sanatorium “Satoka”</OptionText>
