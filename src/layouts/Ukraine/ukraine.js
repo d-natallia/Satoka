@@ -37,7 +37,7 @@ const LIST = [
   },
   {
     title: "Gesammelt",
-    text: ["100 Euro", "20 Euro", "50 Euro", "100 Euro", "50 Euro"],
+    text: ["500 Euro", "800 Euro", "150 Euro", "200 Euro", "300 Euro"],
   },
 ];
 
