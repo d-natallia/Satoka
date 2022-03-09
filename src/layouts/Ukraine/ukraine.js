@@ -12,10 +12,6 @@ import {
   BlockContainer,
   BlockBlank,
   BlockFilled,
-  ListContainer,
-  ListItem,
-  ListTitle,
-  ListText,
   ReasonsWrapper,
   ReasonContainer,
   ReasonContainerRow,
@@ -23,23 +19,6 @@ import {
   ReasonContainerTitle,
   ReasonContainerText,
 } from "./ukraine.styles";
-
-const LIST = [
-  {
-    title: "Verwendungszwecke",
-    text: [
-      "Fahrkosten",
-      "Unterkunft",
-      "Hygieneartikel",
-      "Medikamente",
-      "Bekleidung",
-    ],
-  },
-  {
-    title: "Gesammelt",
-    text: ["500 Euro", "800 Euro", "150 Euro", "200 Euro", "300 Euro"],
-  },
-];
 
 const REASONS = [
   {
@@ -112,16 +91,6 @@ export const Ukraine = () => (
           </p>
         </BlockFilled>
       </BlockContainer>
-      <ListContainer>
-        {LIST.map(({ title, text }) => (
-          <ListItem>
-            <ListTitle>{title}:</ListTitle>
-            {text.map((text) => (
-              <ListText>{text}</ListText>
-            ))}
-          </ListItem>
-        ))}
-      </ListContainer>
       <MainText>
         Alle bereits getätigten Spenden werden anonym online auf unserer
         Webseite aufgelistet. Als ein eingetragener Verein können wir Ihnen

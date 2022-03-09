@@ -94,11 +94,13 @@ export const MainText = styled(Text)`
 export const BlockContainer = styled.div`
   display: flex;
   flex: 1 1;
+  margin-bottom: 50px;
 
   ${SCREEN_QUERIES.small} {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
   }
 `;
 
@@ -107,6 +109,7 @@ export const BlockBlank = styled.div`
   flex-direction: column;
   flex: 1;
   border: 1px solid #5585ff;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   padding: 92px 84px;
@@ -138,7 +141,7 @@ export const BlockBlank = styled.div`
   }
 
   ${SCREEN_QUERIES.small} {
-    max-width: 370px;
+    max-width: 410px;
 
     & p {
       font-size: 20px;
@@ -186,78 +189,6 @@ export const BlockFilled = styled.div`
       font-size: 16px;
       line-height: 20px;
     }
-  }
-`;
-
-export const ListContainer = styled.div`
-  display: flex;
-  flex: 1 1;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  ${SCREEN_QUERIES.small} {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-`;
-
-export const ListItem = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-
-  ${SCREEN_QUERIES.small} {
-    max-width: 185px;
-  }
-`;
-
-export const ListTitle = styled(Text)`
-  font-family: "Gothic A1";
-  font-weight: 500;
-  font-size: 50px;
-  line-height: 62px;
-  color: #000;
-  margin-bottom: 30px;
-
-  ${SCREEN_QUERIES.large} {
-    font-size: 40px;
-  }
-
-  ${SCREEN_QUERIES.medium} {
-    line-height: 40px;
-    font-size: 25px;
-  }
-
-  ${SCREEN_QUERIES.small} {
-    margin-bottom: 20px;
-    line-height: 30px;
-    font-size: 15px;
-  }
-`;
-
-export const ListText = styled(Text)`
-  font-family: "Gothic A1";
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 45px;
-  color: #000;
-  margin-bottom: 15px;
-
-  ${SCREEN_QUERIES.large} {
-    font-size: 30px;
-  }
-
-  ${SCREEN_QUERIES.medium} {
-    font-size: 20px;
-    line-height: 25px;
-  }
-
-  ${SCREEN_QUERIES.small} {
-    margin-bottom: 10px;
-    line-height: 12px;
-    font-size: 10px;
   }
 `;
 
